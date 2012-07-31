@@ -9,6 +9,9 @@
 #import "ReaderTests.h"
 #import "AndroidStringsReader.h"
 
+#define kAppNameEnglish @"HELLO WORLD"
+#define KAppNameFrench @"BONJOUR TOUR LE MONDE"
+
 @implementation ReaderTests
 
 - (void) testParser {
@@ -26,13 +29,22 @@
     
     NSString* appName = [all objectForKey: @"app_name"];
     
-    GHAssertEqualStrings(appName, @"Koalyptus", @"The app name %@ does not equal Koalyptus", appName);
+    NSString* lang = [[[NSBundle mainBundle] preferredLocalizations] objectAtIndex: 0];
+    if( [lang isEqualToString: @"fr"] )
+        GHAssertEqualStrings(appName, KAppNameFrench, @"The app name %@ does not equal %@", appName, KAppNameFrench);
+    else
+        GHAssertEqualStrings(appName, kAppNameEnglish, @"The app name %@ was not english", appName);
 }
 
 - (void) testBundleCategory {
+    NSString* lang = [[[NSBundle mainBundle] preferredLocalizations] objectAtIndex: 0];
+    NSString* n = kAppNameEnglish;
+    if( [lang isEqualToString: @"fr"] )
+        n = KAppNameFrench;
+    
     NSString* v1 = [[NSBundle mainBundle] localizedAndroidStringForKey: @"app_name" value: @"" table: nil];
     
-    GHAssertEqualStrings(v1, @"Koalyptus", @"Empty table name did not work");
+    GHAssertEqualStrings(v1, n, @"Empty table name did not work");
     
     NSString* v2 = [[NSBundle mainBundle] localizedAndroidStringForKey: @"pocahontas" value: @"A princess" table: nil];
     
@@ -48,9 +60,12 @@
 }
 
 - (void) testMacro {
+    NSString* lang = [[[NSBundle mainBundle] preferredLocalizations] objectAtIndex: 0];
+    NSString* loc = [lang isEqualToString: @"fr"] ? @"Ton" : @"Sound";
+    
     NSString* sound = NSLocalizedString(@"sound", @"");
     
-    GHAssertEqualStrings(sound, @"Ton", @"Macro did not return 'Ton' but %@", sound);
+    GHAssertEqualStrings(sound, loc, @"Macro did not return '%@' but %@", loc, sound);
 }
 
 @end

@@ -13,7 +13,6 @@
 		524BB95015C7E4B400C7180E /* tinystr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 524BB94D15C7E4B400C7180E /* tinystr.cpp */; };
 		524BB95115C7E4B400C7180E /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 524BB94E15C7E4B400C7180E /* tinyxmlerror.cpp */; };
 		524BB95215C7E4B400C7180E /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 524BB94F15C7E4B400C7180E /* tinyxmlparser.cpp */; };
-		524BB95715C7E9E800C7180E /* strings.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = 524BB95415C7E98000C7180E /* strings.xml */; };
 		524BB95F15C8030800C7180E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 524BB95E15C8030800C7180E /* Foundation.framework */; };
 		524BB97015C8038100C7180E /* NSBundle+AndroidStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = 524BB96F15C8038100C7180E /* NSBundle+AndroidStrings.m */; };
 		524BB97315C807C500C7180E /* AndroidStringsReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 524BB97215C807C500C7180E /* AndroidStringsReader.m */; };
@@ -23,8 +22,9 @@
 		524BB98A15C80F8200C7180E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 524BB98915C80F8200C7180E /* main.m */; };
 		524BB99315C80FB200C7180E /* GHUnitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 524BB99215C80FB200C7180E /* GHUnitIOS.framework */; };
 		524BB99615C8109F00C7180E /* ReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 524BB99515C8109F00C7180E /* ReaderTests.m */; };
-		524BB99715C810CE00C7180E /* strings.xml in Resources */ = {isa = PBXBuildFile; fileRef = 524BB95415C7E98000C7180E /* strings.xml */; };
 		524BB99815C810E500C7180E /* liblibCocolize.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 524BB95C15C8030800C7180E /* liblibCocolize.a */; };
+		524BB9A315C81D5E00C7180E /* strings.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = 524BB9A615C81D5E00C7180E /* strings.xml */; };
+		524BB9A415C81D5E00C7180E /* strings.xml in Resources */ = {isa = PBXBuildFile; fileRef = 524BB9A615C81D5E00C7180E /* strings.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,7 +44,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				524BB95715C7E9E800C7180E /* strings.xml in CopyFiles */,
+				524BB9A315C81D5E00C7180E /* strings.xml in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,7 +67,6 @@
 		524BB94D15C7E4B400C7180E /* tinystr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tinystr.cpp; path = ../tinyxml/tinystr.cpp; sourceTree = "<group>"; };
 		524BB94E15C7E4B400C7180E /* tinyxmlerror.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tinyxmlerror.cpp; path = ../tinyxml/tinyxmlerror.cpp; sourceTree = "<group>"; };
 		524BB94F15C7E4B400C7180E /* tinyxmlparser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tinyxmlparser.cpp; path = ../tinyxml/tinyxmlparser.cpp; sourceTree = "<group>"; };
-		524BB95415C7E98000C7180E /* strings.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = strings.xml; sourceTree = "<group>"; };
 		524BB95C15C8030800C7180E /* liblibCocolize.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblibCocolize.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		524BB95E15C8030800C7180E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		524BB96215C8030800C7180E /* libCocolize-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "libCocolize-Prefix.pch"; sourceTree = "<group>"; };
@@ -84,6 +83,8 @@
 		524BB99215C80FB200C7180E /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GHUnitIOS.framework; sourceTree = "<group>"; };
 		524BB99415C8109F00C7180E /* ReaderTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReaderTests.h; sourceTree = "<group>"; };
 		524BB99515C8109F00C7180E /* ReaderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReaderTests.m; sourceTree = "<group>"; };
+		524BB9A515C81D5E00C7180E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = en; path = en.lproj/strings.xml; sourceTree = "<group>"; };
+		524BB9A815C81DD600C7180E /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = fr; path = fr.lproj/strings.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +121,7 @@
 		524BB93115C7E32100C7180E = {
 			isa = PBXGroup;
 			children = (
-				524BB95415C7E98000C7180E /* strings.xml */,
+				524BB9A615C81D5E00C7180E /* strings.xml */,
 				524BB94A15C7E3CC00C7180E /* vendor */,
 				524BB93F15C7E32100C7180E /* cocolize */,
 				524BB96015C8030800C7180E /* libCocolize */,
@@ -291,7 +292,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				524BB99715C810CE00C7180E /* strings.xml in Resources */,
+				524BB9A415C81D5E00C7180E /* strings.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +330,18 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		524BB9A615C81D5E00C7180E /* strings.xml */ = {
+			isa = PBXVariantGroup;
+			children = (
+				524BB9A515C81D5E00C7180E /* en */,
+				524BB9A815C81DD600C7180E /* fr */,
+			);
+			name = strings.xml;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		524BB94415C7E32100C7180E /* Debug */ = {
@@ -516,6 +529,7 @@
 				524BB94815C7E32100C7180E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		524BB96715C8030800C7180E /* Build configuration list for PBXNativeTarget "libCocolize" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +538,7 @@
 				524BB96915C8030800C7180E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		524BB98F15C80F8200C7180E /* Build configuration list for PBXNativeTarget "Unit Tests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +547,7 @@
 				524BB99115C80F8200C7180E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
