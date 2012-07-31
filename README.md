@@ -1,4 +1,4 @@
-Cocolize is an attempt at reducing translation workload on multi platform development. It allows iOS developers to link directly into Android string files to centralize the translated texts.
+Cocolize is an attempt at reducing translation workload on multi platform development. It allows iOS developers to link directly into Android string files to centralize the translated texts. This means instead of having strings.xml for your Android development and then copying all those strings over manually (or worse, sending the copied strings to translate as well), you can now automatically generate the iOS Localizable.strings file or use the strings.xml file directly.
 
 There are two variants
 
@@ -19,5 +19,7 @@ On the other hand libCocolize, is an attempt at using Android xml files directly
 The project can be installed as a normal dependency but make sure the -ObjC, -all_load linker flags are defined or the category will not load correctly.
 
 The minimum requirements for libCocolize are:
-Xcode 4.4
-iOS 4.0+
+<ul>
+<li>Xcode 4.4</li>
+<li>iOS 4.0+</li>
+</ul>
