@@ -20,7 +20,7 @@ An example of how to use it:
 
     NSString* helloWorld = NSLocalizedString(@"hello world", @"");
     NSString* lang = [[[NSBundle mainBundle] preferredLocalizations] objectAtIndex: 0];
-    NSLog(@"Hello world in (%@) is: %@", helloWorld);
+    NSLog(@"Hello world in (%@) is: %@", lang, helloWorld);
 
 will output:
 
