@@ -9,18 +9,53 @@
 /* Begin PBXBuildFile section */
 		524BB94115C7E32100C7180E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 524BB94015C7E32100C7180E /* main.cpp */; };
 		524BB94315C7E32100C7180E /* cocolize.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 524BB94215C7E32100C7180E /* cocolize.1 */; };
+		524BB94C15C7E49900C7180E /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 524BB94B15C7E49900C7180E /* tinyxml.cpp */; };
+		524BB95015C7E4B400C7180E /* tinystr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 524BB94D15C7E4B400C7180E /* tinystr.cpp */; };
+		524BB95115C7E4B400C7180E /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 524BB94E15C7E4B400C7180E /* tinyxmlerror.cpp */; };
+		524BB95215C7E4B400C7180E /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 524BB94F15C7E4B400C7180E /* tinyxmlparser.cpp */; };
+		524BB95715C7E9E800C7180E /* strings.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = 524BB95415C7E98000C7180E /* strings.xml */; };
+		524BB95F15C8030800C7180E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 524BB95E15C8030800C7180E /* Foundation.framework */; };
+		524BB97015C8038100C7180E /* NSBundle+AndroidStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = 524BB96F15C8038100C7180E /* NSBundle+AndroidStrings.m */; };
+		524BB97315C807C500C7180E /* AndroidStringsReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 524BB97215C807C500C7180E /* AndroidStringsReader.m */; };
+		524BB97F15C80F8200C7180E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 524BB97E15C80F8200C7180E /* UIKit.framework */; };
+		524BB98015C80F8200C7180E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 524BB95E15C8030800C7180E /* Foundation.framework */; };
+		524BB98215C80F8200C7180E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 524BB98115C80F8200C7180E /* CoreGraphics.framework */; };
+		524BB98A15C80F8200C7180E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 524BB98915C80F8200C7180E /* main.m */; };
+		524BB99315C80FB200C7180E /* GHUnitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 524BB99215C80FB200C7180E /* GHUnitIOS.framework */; };
+		524BB99615C8109F00C7180E /* ReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 524BB99515C8109F00C7180E /* ReaderTests.m */; };
+		524BB99715C810CE00C7180E /* strings.xml in Resources */ = {isa = PBXBuildFile; fileRef = 524BB95415C7E98000C7180E /* strings.xml */; };
+		524BB99815C810E500C7180E /* liblibCocolize.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 524BB95C15C8030800C7180E /* liblibCocolize.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		524BB93A15C7E32100C7180E /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
+			dstPath = usr/share/man/man1;
 			dstSubfolderSpec = 0;
 			files = (
 				524BB94315C7E32100C7180E /* cocolize.1 in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
+		};
+		524BB95615C7E9E100C7180E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				524BB95715C7E9E800C7180E /* strings.xml in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		524BB95A15C8030800C7180E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -28,6 +63,27 @@
 		524BB93C15C7E32100C7180E /* cocolize */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = cocolize; sourceTree = BUILT_PRODUCTS_DIR; };
 		524BB94015C7E32100C7180E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		524BB94215C7E32100C7180E /* cocolize.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = cocolize.1; sourceTree = "<group>"; };
+		524BB94B15C7E49900C7180E /* tinyxml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tinyxml.cpp; path = ../tinyxml/tinyxml.cpp; sourceTree = "<group>"; };
+		524BB94D15C7E4B400C7180E /* tinystr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tinystr.cpp; path = ../tinyxml/tinystr.cpp; sourceTree = "<group>"; };
+		524BB94E15C7E4B400C7180E /* tinyxmlerror.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tinyxmlerror.cpp; path = ../tinyxml/tinyxmlerror.cpp; sourceTree = "<group>"; };
+		524BB94F15C7E4B400C7180E /* tinyxmlparser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tinyxmlparser.cpp; path = ../tinyxml/tinyxmlparser.cpp; sourceTree = "<group>"; };
+		524BB95415C7E98000C7180E /* strings.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = strings.xml; sourceTree = "<group>"; };
+		524BB95C15C8030800C7180E /* liblibCocolize.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblibCocolize.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		524BB95E15C8030800C7180E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		524BB96215C8030800C7180E /* libCocolize-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "libCocolize-Prefix.pch"; sourceTree = "<group>"; };
+		524BB96E15C8038100C7180E /* NSBundle+AndroidStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+AndroidStrings.h"; sourceTree = "<group>"; };
+		524BB96F15C8038100C7180E /* NSBundle+AndroidStrings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+AndroidStrings.m"; sourceTree = "<group>"; };
+		524BB97115C807C500C7180E /* AndroidStringsReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AndroidStringsReader.h; sourceTree = "<group>"; };
+		524BB97215C807C500C7180E /* AndroidStringsReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AndroidStringsReader.m; sourceTree = "<group>"; };
+		524BB97C15C80F8200C7180E /* Unit Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Unit Tests.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		524BB97E15C80F8200C7180E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		524BB98115C80F8200C7180E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		524BB98515C80F8200C7180E /* Unit Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Unit Tests-Info.plist"; sourceTree = "<group>"; };
+		524BB98915C80F8200C7180E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		524BB98B15C80F8200C7180E /* Unit Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Unit Tests-Prefix.pch"; sourceTree = "<group>"; };
+		524BB99215C80FB200C7180E /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GHUnitIOS.framework; sourceTree = "<group>"; };
+		524BB99415C8109F00C7180E /* ReaderTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReaderTests.h; sourceTree = "<group>"; };
+		524BB99515C8109F00C7180E /* ReaderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReaderTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,13 +94,38 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		524BB95915C8030800C7180E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				524BB95F15C8030800C7180E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		524BB97915C80F8200C7180E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				524BB99815C810E500C7180E /* liblibCocolize.a in Frameworks */,
+				524BB97F15C80F8200C7180E /* UIKit.framework in Frameworks */,
+				524BB98015C80F8200C7180E /* Foundation.framework in Frameworks */,
+				524BB98215C80F8200C7180E /* CoreGraphics.framework in Frameworks */,
+				524BB99315C80FB200C7180E /* GHUnitIOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		524BB93115C7E32100C7180E = {
 			isa = PBXGroup;
 			children = (
+				524BB95415C7E98000C7180E /* strings.xml */,
+				524BB94A15C7E3CC00C7180E /* vendor */,
 				524BB93F15C7E32100C7180E /* cocolize */,
+				524BB96015C8030800C7180E /* libCocolize */,
+				524BB98315C80F8200C7180E /* Unit Tests */,
+				524BB95D15C8030800C7180E /* Frameworks */,
 				524BB93D15C7E32100C7180E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,6 +134,8 @@
 			isa = PBXGroup;
 			children = (
 				524BB93C15C7E32100C7180E /* cocolize */,
+				524BB95C15C8030800C7180E /* liblibCocolize.a */,
+				524BB97C15C80F8200C7180E /* Unit Tests.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,6 +149,60 @@
 			path = cocolize;
 			sourceTree = "<group>";
 		};
+		524BB94A15C7E3CC00C7180E /* vendor */ = {
+			isa = PBXGroup;
+			children = (
+				524BB95315C7E4BB00C7180E /* tinyxml */,
+			);
+			name = vendor;
+			sourceTree = "<group>";
+		};
+		524BB95315C7E4BB00C7180E /* tinyxml */ = {
+			isa = PBXGroup;
+			children = (
+				524BB94D15C7E4B400C7180E /* tinystr.cpp */,
+				524BB94E15C7E4B400C7180E /* tinyxmlerror.cpp */,
+				524BB94F15C7E4B400C7180E /* tinyxmlparser.cpp */,
+				524BB94B15C7E49900C7180E /* tinyxml.cpp */,
+			);
+			name = tinyxml;
+			sourceTree = "<group>";
+		};
+		524BB95D15C8030800C7180E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				524BB99215C80FB200C7180E /* GHUnitIOS.framework */,
+				524BB95E15C8030800C7180E /* Foundation.framework */,
+				524BB97E15C80F8200C7180E /* UIKit.framework */,
+				524BB98115C80F8200C7180E /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		524BB96015C8030800C7180E /* libCocolize */ = {
+			isa = PBXGroup;
+			children = (
+				524BB96215C8030800C7180E /* libCocolize-Prefix.pch */,
+				524BB96E15C8038100C7180E /* NSBundle+AndroidStrings.h */,
+				524BB96F15C8038100C7180E /* NSBundle+AndroidStrings.m */,
+				524BB97115C807C500C7180E /* AndroidStringsReader.h */,
+				524BB97215C807C500C7180E /* AndroidStringsReader.m */,
+			);
+			path = libCocolize;
+			sourceTree = "<group>";
+		};
+		524BB98315C80F8200C7180E /* Unit Tests */ = {
+			isa = PBXGroup;
+			children = (
+				524BB98515C80F8200C7180E /* Unit Tests-Info.plist */,
+				524BB98915C80F8200C7180E /* main.m */,
+				524BB98B15C80F8200C7180E /* Unit Tests-Prefix.pch */,
+				524BB99415C8109F00C7180E /* ReaderTests.h */,
+				524BB99515C8109F00C7180E /* ReaderTests.m */,
+			);
+			path = "Unit Tests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -76,6 +213,7 @@
 				524BB93815C7E32100C7180E /* Sources */,
 				524BB93915C7E32100C7180E /* Frameworks */,
 				524BB93A15C7E32100C7180E /* CopyFiles */,
+				524BB95615C7E9E100C7180E /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -85,6 +223,40 @@
 			productName = cocolize;
 			productReference = 524BB93C15C7E32100C7180E /* cocolize */;
 			productType = "com.apple.product-type.tool";
+		};
+		524BB95B15C8030800C7180E /* libCocolize */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 524BB96715C8030800C7180E /* Build configuration list for PBXNativeTarget "libCocolize" */;
+			buildPhases = (
+				524BB95815C8030800C7180E /* Sources */,
+				524BB95915C8030800C7180E /* Frameworks */,
+				524BB95A15C8030800C7180E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libCocolize;
+			productName = libCocolize;
+			productReference = 524BB95C15C8030800C7180E /* liblibCocolize.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		524BB97B15C80F8200C7180E /* Unit Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 524BB98F15C80F8200C7180E /* Build configuration list for PBXNativeTarget "Unit Tests" */;
+			buildPhases = (
+				524BB97815C80F8200C7180E /* Sources */,
+				524BB97915C80F8200C7180E /* Frameworks */,
+				524BB97A15C80F8200C7180E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Unit Tests";
+			productName = "Unit Tests";
+			productReference = 524BB97C15C80F8200C7180E /* Unit Tests.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -108,9 +280,22 @@
 			projectRoot = "";
 			targets = (
 				524BB93B15C7E32100C7180E /* cocolize */,
+				524BB95B15C8030800C7180E /* libCocolize */,
+				524BB97B15C80F8200C7180E /* Unit Tests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		524BB97A15C80F8200C7180E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				524BB99715C810CE00C7180E /* strings.xml in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		524BB93815C7E32100C7180E /* Sources */ = {
@@ -118,6 +303,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				524BB94115C7E32100C7180E /* main.cpp in Sources */,
+				524BB94C15C7E49900C7180E /* tinyxml.cpp in Sources */,
+				524BB95015C7E4B400C7180E /* tinystr.cpp in Sources */,
+				524BB95115C7E4B400C7180E /* tinyxmlerror.cpp in Sources */,
+				524BB95215C7E4B400C7180E /* tinyxmlparser.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		524BB95815C8030800C7180E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				524BB97015C8038100C7180E /* NSBundle+AndroidStrings.m in Sources */,
+				524BB97315C807C500C7180E /* AndroidStringsReader.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		524BB97815C80F8200C7180E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				524BB98A15C80F8200C7180E /* main.m in Sources */,
+				524BB99615C8109F00C7180E /* ReaderTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,14 +345,15 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
+					"TIXML_USE_STL=1",
 					"DEBUG=1",
-					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../tinyxml;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -164,10 +372,15 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"TIXML_USE_STL=1",
+					"DEBUG=1",
+				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../tinyxml;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				SDKROOT = macosx;
 			};
@@ -184,6 +397,103 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		524BB96815C8030800C7180E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/libCocolize.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "libCocolize/libCocolize-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = ../tinyxml;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		524BB96915C8030800C7180E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/libCocolize.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "libCocolize/libCocolize-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = ../tinyxml;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		524BB99015C80F8200C7180E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Unit Tests/Unit Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "Unit Tests/Unit Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		524BB99115C80F8200C7180E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Unit Tests/Unit Tests-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "Unit Tests/Unit Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
@@ -204,6 +514,22 @@
 			buildConfigurations = (
 				524BB94715C7E32100C7180E /* Debug */,
 				524BB94815C7E32100C7180E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		524BB96715C8030800C7180E /* Build configuration list for PBXNativeTarget "libCocolize" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				524BB96815C8030800C7180E /* Debug */,
+				524BB96915C8030800C7180E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		524BB98F15C80F8200C7180E /* Build configuration list for PBXNativeTarget "Unit Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				524BB99015C80F8200C7180E /* Debug */,
+				524BB99115C80F8200C7180E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

@@ -1,4 +1,4 @@
 cocolize
 ========
 
-Turn android xml file into  iphone strings file
+This is a 

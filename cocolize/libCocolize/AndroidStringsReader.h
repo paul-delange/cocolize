@@ -6,8 +6,10 @@
 //  Copyright (c) 2012 Tall Developments. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 @interface AndroidStringsReader : NSObject
+
++ (NSDictionary*) dictionaryForXMLData: (NSData*) data error: (NSError **) error;
 
 @end
