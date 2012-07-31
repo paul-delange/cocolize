@@ -1,0 +1,213 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		524BB94115C7E32100C7180E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 524BB94015C7E32100C7180E /* main.cpp */; };
+		524BB94315C7E32100C7180E /* cocolize.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 524BB94215C7E32100C7180E /* cocolize.1 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		524BB93A15C7E32100C7180E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				524BB94315C7E32100C7180E /* cocolize.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		524BB93C15C7E32100C7180E /* cocolize */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = cocolize; sourceTree = BUILT_PRODUCTS_DIR; };
+		524BB94015C7E32100C7180E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		524BB94215C7E32100C7180E /* cocolize.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = cocolize.1; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		524BB93915C7E32100C7180E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		524BB93115C7E32100C7180E = {
+			isa = PBXGroup;
+			children = (
+				524BB93F15C7E32100C7180E /* cocolize */,
+				524BB93D15C7E32100C7180E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		524BB93D15C7E32100C7180E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				524BB93C15C7E32100C7180E /* cocolize */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		524BB93F15C7E32100C7180E /* cocolize */ = {
+			isa = PBXGroup;
+			children = (
+				524BB94015C7E32100C7180E /* main.cpp */,
+				524BB94215C7E32100C7180E /* cocolize.1 */,
+			);
+			path = cocolize;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		524BB93B15C7E32100C7180E /* cocolize */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 524BB94615C7E32100C7180E /* Build configuration list for PBXNativeTarget "cocolize" */;
+			buildPhases = (
+				524BB93815C7E32100C7180E /* Sources */,
+				524BB93915C7E32100C7180E /* Frameworks */,
+				524BB93A15C7E32100C7180E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = cocolize;
+			productName = cocolize;
+			productReference = 524BB93C15C7E32100C7180E /* cocolize */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		524BB93315C7E32100C7180E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Tall Developments";
+			};
+			buildConfigurationList = 524BB93615C7E32100C7180E /* Build configuration list for PBXProject "cocolize" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 524BB93115C7E32100C7180E;
+			productRefGroup = 524BB93D15C7E32100C7180E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				524BB93B15C7E32100C7180E /* cocolize */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		524BB93815C7E32100C7180E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				524BB94115C7E32100C7180E /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		524BB94415C7E32100C7180E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		524BB94515C7E32100C7180E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		524BB94715C7E32100C7180E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		524BB94815C7E32100C7180E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		524BB93615C7E32100C7180E /* Build configuration list for PBXProject "cocolize" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				524BB94415C7E32100C7180E /* Debug */,
+				524BB94515C7E32100C7180E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		524BB94615C7E32100C7180E /* Build configuration list for PBXNativeTarget "cocolize" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				524BB94715C7E32100C7180E /* Debug */,
+				524BB94815C7E32100C7180E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 524BB93315C7E32100C7180E /* Project object */;
+}
