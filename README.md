@@ -16,6 +16,17 @@ libCocolize
 
 On the other hand libCocolize, is an attempt at using Android xml files directly in an iOS project. The library overrides NSLocalizedString to use the localized xml file of your choice. 
 
+An example of how to use it:
+
+    NSString* helloWorld = NSLocalizedString(@"hello world", @"");
+    NSString* lang = [[[NSBundle mainBundle] preferredLocalizations] objectAtIndex: 0];
+    NSLog(@"Hello world in (%@) is: %@", helloWorld);
+
+will output:
+
+    Hello world in (en) is: Hello World
+    Hello world in (fr) is: Bonjour monde
+
 The project can be installed as a normal dependency but make sure the -ObjC, -all_load linker flags are defined or the category will not load correctly.
 
 The minimum requirements for libCocolize are:
