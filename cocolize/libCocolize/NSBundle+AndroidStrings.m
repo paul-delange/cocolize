@@ -80,7 +80,7 @@ static char* kNSBundleAndroidStringsTableAssociationKey = "NSBundle.stringsTable
         
         NSString* tableValue = [table objectForKey: key];
         if( !tableValue )
-            tableValue = value;
+            tableValue = [self localizedStringForKey: key value: value table: tableName];
         
         return tableValue;
     }

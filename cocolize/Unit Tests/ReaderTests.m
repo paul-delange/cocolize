@@ -69,10 +69,6 @@
 }
 
 - (void) testFormatSpecifiers {
-    NSString* lang = [[[NSBundle mainBundle] preferredLocalizations] objectAtIndex: 0];
-    NSString* n = kAppNameEnglish;
-    if( [lang isEqualToString: @"fr"] )
-        n = KAppNameFrench;
     
     NSString* indexed = [NSString stringWithFormat: NSLocalizedString(@"welcome", @""), @"25", @"Homer"];
     NSString* unindexed = [NSString stringWithFormat: NSLocalizedString(@"welcome2", @""), @"Homer", @"25"];
@@ -111,6 +107,11 @@
         
         GHAssertTrue(output.length, @"Formating plural people failed for count: %d", people);
     }
+}
+
+- (void) testUnknownString {
+    NSString* copy = NSLocalizedString(@"copy", @"");
+    GHAssertEqualStrings(copy, @"copy", @"Did not correctly fall throught to native implementation");
 }
 
 @end
