@@ -13,4 +13,4 @@
 @end
 
 #undef NSLocalizedString
-#define NSLocalizedString(key, _comment) [[NSBundle mainBundle] localizedAndroidStringForKey: key value: nil table: nil];
+#define NSLocalizedString(key, _comment) ([[NSBundle mainBundle] localizedAndroidStringForKey: key value: nil table: nil])

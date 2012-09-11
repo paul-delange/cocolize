@@ -67,7 +67,14 @@ static char* kNSBundleAndroidStringsTableAssociationKey = "NSBundle.stringsTable
                 [exception raise];
             }
             else {
-                [self.stringTables setObject: table forKey: tableName];
+                if( table )
+                    [self.stringTables setObject: table forKey: tableName];
+                else {
+                    NSException* exception = [NSException exceptionWithName: @"Strings Table"
+                                                                     reason: @"There was no strings table created"
+                                                                   userInfo: @{ @"TableName" : tableName}];
+                    [exception raise];
+                }
             }
         }
         

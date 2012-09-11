@@ -68,4 +68,16 @@
     GHAssertEqualStrings(sound, loc, @"Macro did not return '%@' but %@", loc, sound);
 }
 
+- (void) testGeneralFormatSpecifiers {
+    NSString* lang = [[[NSBundle mainBundle] preferredLocalizations] objectAtIndex: 0];
+    NSString* n = kAppNameEnglish;
+    if( [lang isEqualToString: @"fr"] )
+        n = KAppNameFrench;
+    
+    NSString* indexed = [NSString stringWithFormat: NSLocalizedString(@"welcome", @""), @"Homer", @"25"];
+    NSString* unindexed = [NSString stringWithFormat: NSLocalizedString(@"welcome2", @""), @"Homer", @"25"];
+    
+    GHAssertEqualStrings(indexed, unindexed, @"Macro did not return '%@' but %@", indexed, unindexed);
+}
+
 @end

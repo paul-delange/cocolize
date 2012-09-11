@@ -3,4 +3,11 @@
     <string name="app_name">BONJOUR TOUR LE MONDE</string>
     <string name="ok">Ok</string>
     <string name="sound">Ton</string>
+    <string name="good">"l'avion marche?'"</string>
+    <string name="good2">ce l\'avion marche aussi?</string>
+    <string name="welcome">Bonjour, %1$s! Vous avez %2$d nouvelle messages.</string>
+    <string name="welcome2">Bonjour, %s! Vous avez %d nouvelle messages.</string>
+    <string name="e">e = %+10.4f</string>
+    <string name="html">Bienvenue de <b>Android</b>!</string>
+    <string name="escaped">Bonjour, %1$s! Vous avez &lt;b>%2$d nouvelle messages&lt;/b>.</string>
 </resources>

@@ -8,6 +8,8 @@
 
 #import "AndroidStringsReader.h"
 
+#import "printf-parse.h"
+
 NSString *const kXMLReaderTextNodeKey = @"text";
 
 @interface AndroidStringsReader () <NSXMLParserDelegate> {
@@ -59,6 +61,7 @@ NSString *const kXMLReaderTextNodeKey = @"text";
         NSArray* strings = [resources objectForKey: @"string"];
         
         NSMutableDictionary* mutable = [NSMutableDictionary dictionaryWithCapacity: [strings count]];
+        NSMutableDictionary* unparsable = [NSMutableDictionary dictionary];
         
         for(NSDictionary* string in strings) {
             NSString* key = [string objectForKey: @"name"];
@@ -68,9 +71,145 @@ NSString *const kXMLReaderTextNodeKey = @"text";
             key = [key stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceAndNewlineCharacterSet]];
             value = [value stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceAndNewlineCharacterSet]];
             
-            if( key && value ) {
-                [mutable setObject: value forKey: key];
+            if( [key length] && [value length] ) {
+                
+                const char* utf8 = [value UTF8String];
+                char_directives d;
+                arguments a;
+                printf_parse(utf8, &d, &a);
+                
+                if( d.count ) {
+                for(NSUInteger i=0;i<d.count;i++) {
+                    char_directive directive = d.dir[i];
+                    NSInteger start = directive.dir_start-utf8;
+                    NSInteger length = directive.dir_end-directive.dir_start;
+                    
+                    switch (directive.conversion) {
+                        case 's':
+                        case 'S':
+                        {
+                            NSRange conversionRange = [value rangeOfString: @"s"
+                                                                   options: NSCaseInsensitiveSearch
+                                                                     range: NSMakeRange(start, length)];
+                            
+                            if( conversionRange.location == NSNotFound ) {
+                                NSLog(@"Could not find 's' specifier in: '%@'", value);
+                                [unparsable setObject: value forKey: key];
+                                goto stop_parsing;
+                            }
+                            else {
+                                value = [value stringByReplacingCharactersInRange: conversionRange withString: @"@"];
+                                [mutable setObject: value
+                                            forKey: key];
+                            }
+                            break;
+                        }
+                        case 'c':
+                        case 'C':
+                        {
+                            NSRange conversionRange = [value rangeOfString: @"c"
+                                                                   options: NSCaseInsensitiveSearch
+                                                                     range: NSMakeRange(start, length)];
+                            
+                            if( conversionRange.location == NSNotFound ) {
+                                NSLog(@"Could not find 'c' specifier in: '%@'", value);
+                                [unparsable setObject: value forKey: key];
+                                goto stop_parsing;
+                            }
+                            else {
+                                value = [value stringByReplacingCharactersInRange: conversionRange withString: @"@"];
+                                [mutable setObject: value
+                                            forKey: key];
+                            }
+                            break;
+                        }
+                        case 'i':
+                        case 'I':
+                        case 'd':
+                        case 'D':
+                        {
+                            NSInteger widthLength = directive.width_end-directive.width_start;
+                            NSInteger precisionLength = directive.precision_start-directive.precision_end;
+                            if (directive.flags == 0 &&
+                                widthLength <= 0     &&
+                                precisionLength <= 0    ) {
+                                NSRange conversionRange = [value rangeOfString: @"d"
+                                                                       options: NSCaseInsensitiveSearch
+                                                                         range: NSMakeRange(start, length)];
+                                
+                                if( conversionRange.location == NSNotFound ) {
+                                    NSLog(@"Could not find 'd' specifier in: '%@'", value);
+                                    [unparsable setObject: value forKey: key];
+                                    goto stop_parsing;
+                                }
+                                else {
+                                    value = [value stringByReplacingCharactersInRange: conversionRange withString: @"@"];
+                                    [mutable setObject: value
+                                                forKey: key];
+                                }
+                            }
+                            else {
+                                [mutable setObject: value forKey: key];
+                            }
+                            break;
+                        }
+                        case 'f':
+                        case 'F':
+                        {
+                            NSInteger widthLength = directive.width_end-directive.width_start;
+                            NSInteger precisionLength = directive.precision_start-directive.precision_end;
+                            if (directive.flags == 0 &&
+                                widthLength <= 0     &&
+                                precisionLength <= 0    ) {
+                                NSRange conversionRange = [value rangeOfString: @"f"
+                                                                       options: NSCaseInsensitiveSearch
+                                                                         range: NSMakeRange(start, length)];
+                                
+                                if( conversionRange.location == NSNotFound ) {
+                                    NSLog(@"Could not find 'f' specifier in: '%@'", value);
+                                    [unparsable setObject: value forKey: key];
+                                    goto stop_parsing;
+                                }
+                                else {
+                                    value = [value stringByReplacingCharactersInRange: conversionRange withString: @"@"];
+                                    [mutable setObject: value
+                                                forKey: key];
+                                }
+                            }
+                            else {
+                                [mutable setObject: value forKey: key];
+                            }
+                            break;
+                        }
+                        default:
+                        {
+                            NSLog(@"Could not parse: '%@'", value);
+                            [unparsable setObject: value forKey: key];
+                            goto stop_parsing;
+                        }
+                    }
+                }
+                
+                continue;
+                
+            stop_parsing:
+                NSLog(@"Skipping other specifiers for string: '%@'", value);
+                }
+                else {
+                    [mutable setObject: value forKey: key];
+                }
             }
+        }
+        
+        if( [unparsable count]) {
+            NSLog(@"Warning!! Could not parse the following strings:");
+            for(NSString* key in [unparsable allKeys]) {
+                NSLog(@"[%@] = '%@'", key, [unparsable valueForKey: key]);
+            }
+        }
+        
+        for(NSString* key in [mutable allKeys]) {
+            NSLog(@"[%@]='%@'", key, [mutable valueForKey: key]);
         }
         
         return mutable;
@@ -154,3 +293,4 @@ NSString *const kXMLReaderTextNodeKey = @"text";
 }
 
 @end
+

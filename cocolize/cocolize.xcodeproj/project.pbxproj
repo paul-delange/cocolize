@@ -25,6 +25,12 @@
 		524BB99815C810E500C7180E /* liblibCocolize.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 524BB95C15C8030800C7180E /* liblibCocolize.a */; };
 		524BB9A315C81D5E00C7180E /* strings.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = 524BB9A615C81D5E00C7180E /* strings.xml */; };
 		524BB9A415C81D5E00C7180E /* strings.xml in Resources */ = {isa = PBXBuildFile; fileRef = 524BB9A615C81D5E00C7180E /* strings.xml */; };
+		52C824D015FF2B5200824CDA /* printf-args.c in Sources */ = {isa = PBXBuildFile; fileRef = 52C824CB15FF2B5200824CDA /* printf-args.c */; };
+		52C824D115FF2B5200824CDA /* printf-args.c in Sources */ = {isa = PBXBuildFile; fileRef = 52C824CB15FF2B5200824CDA /* printf-args.c */; };
+		52C824D315FF2B5200824CDA /* printf-parse.c in Sources */ = {isa = PBXBuildFile; fileRef = 52C824CD15FF2B5200824CDA /* printf-parse.c */; };
+		52C824D415FF2B5200824CDA /* printf-parse.c in Sources */ = {isa = PBXBuildFile; fileRef = 52C824CD15FF2B5200824CDA /* printf-parse.c */; };
+		52C824DA15FF34C300824CDA /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C824D915FF34C300824CDA /* NSString+HTML.m */; };
+		52C824DB15FF34C300824CDA /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C824D915FF34C300824CDA /* NSString+HTML.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -85,6 +91,13 @@
 		524BB99515C8109F00C7180E /* ReaderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReaderTests.m; sourceTree = "<group>"; };
 		524BB9A515C81D5E00C7180E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = en; path = en.lproj/strings.xml; sourceTree = "<group>"; };
 		524BB9A815C81DD600C7180E /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = fr; path = fr.lproj/strings.xml; sourceTree = "<group>"; };
+		52C824CB15FF2B5200824CDA /* printf-args.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "printf-args.c"; sourceTree = "<group>"; };
+		52C824CC15FF2B5200824CDA /* printf-args.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "printf-args.h"; sourceTree = "<group>"; };
+		52C824CD15FF2B5200824CDA /* printf-parse.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "printf-parse.c"; sourceTree = "<group>"; };
+		52C824CE15FF2B5200824CDA /* printf-parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "printf-parse.h"; sourceTree = "<group>"; };
+		52C824CF15FF2B5200824CDA /* xsize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xsize.h; sourceTree = "<group>"; };
+		52C824D815FF34C300824CDA /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTML.h"; sourceTree = "<group>"; };
+		52C824D915FF34C300824CDA /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTML.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +166,7 @@
 		524BB94A15C7E3CC00C7180E /* vendor */ = {
 			isa = PBXGroup;
 			children = (
+				52C824D615FF2B5700824CDA /* lib/gl */,
 				524BB95315C7E4BB00C7180E /* tinyxml */,
 			);
 			name = vendor;
@@ -188,6 +202,8 @@
 				524BB96F15C8038100C7180E /* NSBundle+AndroidStrings.m */,
 				524BB97115C807C500C7180E /* AndroidStringsReader.h */,
 				524BB97215C807C500C7180E /* AndroidStringsReader.m */,
+				52C824D815FF34C300824CDA /* NSString+HTML.h */,
+				52C824D915FF34C300824CDA /* NSString+HTML.m */,
 			);
 			path = libCocolize;
 			sourceTree = "<group>";
@@ -202,6 +218,18 @@
 				524BB99515C8109F00C7180E /* ReaderTests.m */,
 			);
 			path = "Unit Tests";
+			sourceTree = "<group>";
+		};
+		52C824D615FF2B5700824CDA /* lib/gl */ = {
+			isa = PBXGroup;
+			children = (
+				52C824CB15FF2B5200824CDA /* printf-args.c */,
+				52C824CC15FF2B5200824CDA /* printf-args.h */,
+				52C824CD15FF2B5200824CDA /* printf-parse.c */,
+				52C824CE15FF2B5200824CDA /* printf-parse.h */,
+				52C824CF15FF2B5200824CDA /* xsize.h */,
+			);
+			name = lib/gl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,6 +336,9 @@
 				524BB95015C7E4B400C7180E /* tinystr.cpp in Sources */,
 				524BB95115C7E4B400C7180E /* tinyxmlerror.cpp in Sources */,
 				524BB95215C7E4B400C7180E /* tinyxmlparser.cpp in Sources */,
+				52C824D015FF2B5200824CDA /* printf-args.c in Sources */,
+				52C824D315FF2B5200824CDA /* printf-parse.c in Sources */,
+				52C824DA15FF34C300824CDA /* NSString+HTML.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +348,9 @@
 			files = (
 				524BB97015C8038100C7180E /* NSBundle+AndroidStrings.m in Sources */,
 				524BB97315C807C500C7180E /* AndroidStringsReader.m in Sources */,
+				52C824D115FF2B5200824CDA /* printf-args.c in Sources */,
+				52C824D415FF2B5200824CDA /* printf-parse.c in Sources */,
+				52C824DB15FF34C300824CDA /* NSString+HTML.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,7 +502,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = "";
 				INFOPLIST_FILE = "Unit Tests/Unit Tests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_LDFLAGS = (
@@ -494,7 +528,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Unit Tests/Unit Tests-Prefix.pch";
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = "";
 				INFOPLIST_FILE = "Unit Tests/Unit Tests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";

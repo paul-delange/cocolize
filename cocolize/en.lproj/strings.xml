@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Official documentation: http://developer.android.com/guide/topics/resources/string-resource.html 
+         Formatter documentation: http://docs.oracle.com/javase/1.5.0/docs/api/java/util/Formatter.html 
+     -->
     <string name="app_name">HELLO WORLD</string>
     <string name="ok">Ok</string>
     <string name="sound">Sound</string>
+    <string name="good">"This'll work"</string>
+    <string name="good2">This\'ll also work</string>
+    <!-- Format specifier formats
+         General (character, numeric) :     %[argument index$][flags][width][.precision]conversion
+                        conversion options = b, h, s, c, d, o, x, e, f, g, a
+                        flags = -#+ 0,(
+     
+         Time :                             %[argument_index$][flags][width]conversion 
+                        conversion options = t,
+                        flats = -
+     -->
+    <string name="welcome">Hello, %1$s! You have %2$d new messages.</string>
+    <string name="welcome2">Hello, %s! You have %d new messages.</string>
+    <string name="character">Give me a %c</string>
+    <string name="e">e = %+10.4f</string>
+    <string name="simplify">1+2=%d</string>
+    <string name="html">Welcome to <b>Android</b>!</string>
+    <string name="escaped">Hello, %1$s! You have &lt;b>%2$d new messages&lt;/b>.</string>
 </resources>
