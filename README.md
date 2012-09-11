@@ -6,7 +6,7 @@ There are two variants (cocolize and libCocolize) and each supports the followin
 <li>String format specifiers with flags and/or width and/or precision modifiers</li>
 <li>Argument indexes</li>
 <li>Android plural syntax</li>
-<li>Escaped html entities (&lt;b> for <b> etc.)</li>
+<li>Escaped html entities (\&lt;b\> for &lt;b> etc.)</li>
 </ul>
 
 What does not work:
