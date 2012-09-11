@@ -68,16 +68,49 @@
     GHAssertEqualStrings(sound, loc, @"Macro did not return '%@' but %@", loc, sound);
 }
 
-- (void) testGeneralFormatSpecifiers {
+- (void) testFormatSpecifiers {
     NSString* lang = [[[NSBundle mainBundle] preferredLocalizations] objectAtIndex: 0];
     NSString* n = kAppNameEnglish;
     if( [lang isEqualToString: @"fr"] )
         n = KAppNameFrench;
     
-    NSString* indexed = [NSString stringWithFormat: NSLocalizedString(@"welcome", @""), @"Homer", @"25"];
+    NSString* indexed = [NSString stringWithFormat: NSLocalizedString(@"welcome", @""), @"25", @"Homer"];
     NSString* unindexed = [NSString stringWithFormat: NSLocalizedString(@"welcome2", @""), @"Homer", @"25"];
     
     GHAssertEqualStrings(indexed, unindexed, @"Macro did not return '%@' but %@", indexed, unindexed);
+    
+    for(NSInteger people=0;people<6;people++) {
+        NSString* format = nil;
+        switch (people) {
+            case 0:
+            {
+                format = NSLocalizedString(@"people_zero", @"");
+                break;
+            }
+            case 1:
+            {
+                format = NSLocalizedString(@"people_one", @"");
+                break;
+            }
+            case 2:
+            {
+                format = NSLocalizedString(@"people_two", @"");
+                break;
+            }
+            case 3:
+            {
+                format = NSLocalizedString(@"people_other", @"");
+                break;
+            }
+            default:
+                format = NSLocalizedString(@"people_other", @"");
+                break;
+        }
+        
+        NSString* output = [NSString stringWithFormat: format, @(people)];
+        
+        GHAssertTrue(output.length, @"Formating plural people failed for count: %d", people);
+    }
 }
 
 @end

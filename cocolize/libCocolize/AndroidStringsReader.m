@@ -58,7 +58,23 @@ NSString *const kXMLReaderTextNodeKey = @"text";
     {
         NSDictionary *resultDict = [dictionaryStack objectAtIndex:0];
         NSDictionary* resources = [resultDict objectForKey: @"resources"];
-        NSArray* strings = [resources objectForKey: @"string"];
+        NSArray* plurals = [resources objectForKey: @"plurals"];
+        NSMutableArray* pluralData = [NSMutableArray array];
+        
+        for(NSDictionary* plural in plurals) {
+            NSString* name = [plural objectForKey: @"name"];
+            NSArray* quantities = [plural objectForKey: @"item"];
+            for(NSDictionary* item in quantities) {
+                NSString* quantity = [item objectForKey: @"quantity"];
+                NSString* value = [item objectForKey: @"text"];
+                NSString* key = [NSString stringWithFormat: @"%@_%@", name, quantity];
+                
+                NSDictionary* newDict = @{ @"name" : key, @"text" : value };
+                [pluralData addObject: newDict];
+            }
+        }
+        
+        NSArray* strings = [[resources objectForKey: @"string"] arrayByAddingObjectsFromArray: pluralData];
         
         NSMutableDictionary* mutable = [NSMutableDictionary dictionaryWithCapacity: [strings count]];
         NSMutableDictionary* unparsable = [NSMutableDictionary dictionary];

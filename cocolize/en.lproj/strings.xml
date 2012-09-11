@@ -8,20 +8,22 @@
     <string name="sound">Sound</string>
     <string name="good">"This'll work"</string>
     <string name="good2">This\'ll also work</string>
-    <!-- Format specifier formats
-         General (character, numeric) :     %[argument index$][flags][width][.precision]conversion
-                        conversion options = b, h, s, c, d, o, x, e, f, g, a
-                        flags = -#+ 0,(
-     
-         Time :                             %[argument_index$][flags][width]conversion 
-                        conversion options = t,
-                        flats = -
-     -->
-    <string name="welcome">Hello, %1$s! You have %2$d new messages.</string>
+    <string name="welcome">Hello, %2$s! You have %1$d new messages.</string>
     <string name="welcome2">Hello, %s! You have %d new messages.</string>
     <string name="character">Give me a %c</string>
     <string name="e">e = %+10.4f</string>
     <string name="simplify">1+2=%d</string>
     <string name="html">Welcome to <b>Android</b>!</string>
     <string name="escaped">Hello, %1$s! You have &lt;b>%2$d new messages&lt;/b>.</string>
+    <plurals name="plural_bugs">
+        <item quantity="zero">It is a miracle!</item>
+        <item quantity="one">Just one bug...</item>
+        <item quantity="other">Well that is life then isn't it</item>
+    </plurals>
+    <plurals name="people">
+        <item quantity="zero">No people</item>
+        <item quantity="one">A person</item>
+        <item quantity="two">A couple</item>
+        <item quantity="other">%d people</item>
+    </plurals>
 </resources>
