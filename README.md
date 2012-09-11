@@ -7,13 +7,14 @@ There are two variants (cocolize and libCocolize) and each supports the followin
 <li>Argument indexes</li>
 <li>Android plural syntax</li>
 <li>Escaped html entities</li>
+<li>Unescapes \' strings</li>
 </ul>
 
 What does not work:
 <ul>
 <li>String format specifiers: b, h, o, x, g, t, %</li>
 <li>Unescaped html entities</li>
-<li>Special character escaping (\' does not become ' etc.)</li> 
+<li>Will not escape characters to iOS string format (" does not become \" for example)</li>
 </ul>
 
 cocolize
