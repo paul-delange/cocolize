@@ -1,6 +1,20 @@
 Cocolize is an attempt at reducing translation workload on multi platform development. It allows iOS developers to link directly into Android string files to centralize the translated texts. This means instead of having strings.xml for your Android development and then copying all those strings over manually (or worse, sending the copied strings to translate as well), you can now automatically generate the iOS Localizable.strings file or use the strings.xml file directly.
 
-There are two variants
+There are two variants (cocolize and libCocolize) and each supports the following set of android features:
+<ul>
+<li>String format specifiers: s, c, i, d, f, n</li>
+<li>String format specifiers with flags and/or width and/or precision modifiers</li>
+<li>Argument indexes</li>
+<li>Android plural syntax</li>
+<li>Escaped html entities (&lt;b> for <b> etc.)</li>
+</ul>
+
+What does not work:
+<ul>
+<li>String format specifiers: b, h, o, x, g, t, %</li>
+<li>Unescaped html entities</li>
+<li>Special character escaping (\' does not become ' etc.)</li> 
+</ul>
 
 cocolize
 ========
