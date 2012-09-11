@@ -4,10 +4,21 @@
     <string name="ok">Ok</string>
     <string name="sound">Ton</string>
     <string name="good">"l'avion marche?'"</string>
-    <string name="good2">ce l\'avion marche aussi?</string>
+    <string name="good2">l\'avion marche aussi?</string>
     <string name="welcome">Bonjour, %1$s! Vous avez %2$d nouvelle messages.</string>
     <string name="welcome2">Bonjour, %s! Vous avez %d nouvelle messages.</string>
     <string name="e">e = %+10.4f</string>
-    <string name="html">Bienvenue de <b>Android</b>!</string>
+    <string name="html">Bienvenue de <b>Android</b>!</string>   <!-- will not work -->
     <string name="escaped">Bonjour, %1$s! Vous avez &lt;b>%2$d nouvelle messages&lt;/b>.</string>
+    <plurals name="plural_bugs">
+        <item quantity="zero">C\'est un miracle!</item>
+        <item quantity="one">Juste un bug...</item>
+        <item quantity="other">C\'est la vie</item>
+    </plurals>
+    <plurals name="people">
+        <item quantity="zero">personne</item>
+        <item quantity="one">une personne</item>
+        <item quantity="two">un couple</item>
+        <item quantity="other">%d personnes</item>
+    </plurals>
 </resources>

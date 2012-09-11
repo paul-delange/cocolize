@@ -98,6 +98,7 @@
 		52C824CF15FF2B5200824CDA /* xsize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xsize.h; sourceTree = "<group>"; };
 		52C824D815FF34C300824CDA /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTML.h"; sourceTree = "<group>"; };
 		52C824D915FF34C300824CDA /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTML.m"; sourceTree = "<group>"; };
+		52C824E715FF61E700824CDA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +135,7 @@
 		524BB93115C7E32100C7180E = {
 			isa = PBXGroup;
 			children = (
+				52C824E715FF61E700824CDA /* README.md */,
 				524BB9A615C81D5E00C7180E /* strings.xml */,
 				524BB94A15C7E3CC00C7180E /* vendor */,
 				524BB93F15C7E32100C7180E /* cocolize */,
