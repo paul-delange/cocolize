@@ -53,7 +53,7 @@ static char* kNSBundleAndroidStringsTableAssociationKey = "NSBundle.stringsTable
             if( ![tableExtension length] )
                 tableExtension = @"xml";
             
-            NSString* tablePath = [[NSBundle mainBundle] pathForResource: tableFileName ofType: tableExtension];
+            NSString* tablePath = [self pathForResource:@"strings" ofType:@"xml"];
             NSData* tableData = [NSData dataWithContentsOfFile: tablePath];
             NSError* error = nil;
             
