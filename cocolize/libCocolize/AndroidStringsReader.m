@@ -88,7 +88,7 @@ NSString *const kXMLReaderTextNodeKey = @"text";
             value = [value stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceAndNewlineCharacterSet]];
             
             //Android escapes apostrophies
-            value = [value stringByReplacingOccurrencesOfString: @"\'" withString: @"'"];
+            value = [value stringByReplacingOccurrencesOfString: @"\\'" withString: @"'"];
             
             if( [key length] && [value length] ) {
                 
